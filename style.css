@@ -20,7 +20,6 @@ body{
     margin: 0 auto;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     gap: 30px;
     justify-content: center;
     align-items: center;
@@ -197,12 +196,16 @@ footer{
         right: 80px;
         top: 420px;
     }
+    .container{
+        flex-wrap: wrap;
+    }
     
 }
 
 @media screen and (max-width:576px){
    .container{
     width: 100%;
+    flex-wrap: wrap;
    }
    .flexBox1,.flexBox2{
     width: 90%;
@@ -224,6 +227,9 @@ footer{
 
     .submit{
         padding: 25px;
+    }
+    .container{
+        flex-wrap: wrap;
     }
 
 }

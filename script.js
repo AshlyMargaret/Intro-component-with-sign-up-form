@@ -115,26 +115,41 @@ password.addEventListener("keyup",passwordValidation)
 passwordValue = password.value;
 
 function passwordValidation(){
-    var error_msg4 = []
+    var error = []
 
     if (passwordValue.length < 8) {
-        error_msg4.push("Your password must be at least 8 characters")
+        error.push("Your password must be at least 8 characters")
   }
+  else{
+      error.push("")
+  }
+
+
   if (passwordValue.search(/[a-z]/) < 0) {
-       error_msg4.push("Your password must contain at least one lowercase letter.")
+       error.push("Your password must contain at least one lowercase letter.")
   }
+  else{
+    error.push("")
+  }
+
+
   if (passwordValue.search(/[A-Z]/) < 0) {
-      error_msg4.push("Your password must contain at least one uppercase letter.")
+      error.push("Your password must contain at least one uppercase letter.")
   }
+  else{
+    error.push("")
+  }
+
+
 //   if (passwordValue.search(/[0-9]/) < 0) {
-//       error_msg4.push("Your password must contain at least one digit.")
+//       error.push("Your password must contain at least one digit.")
 //   }
 //   if(passwordValue.search(/[\!\@\#\$\%\^\&\*\(\)\_\+\.\,\;\:\-]/) < 0) {
-//     error_msg4.push("Your password must contain at least one special character.")
+//     error.push("Your password must contain at least one special character.")
 //   }
     
-  if (error_msg4.length > 0) {
-    document.getElementById("error_msg4").innerHTML = error_msg4.join("<br>")
+  if (error.length > 0) {
+    document.getElementById("error_msg4").innerHTML = error.join("<br>")
     return false;
   }
   return true;

@@ -45,11 +45,9 @@ function firstNameValidation(){
         document.getElementById("error_msg1").innerHTML = "enter valid name"
     }
 
-    else if (firstNameValue.length == 0){
-        document.getElementById("error_msg1").innerHTML = " Name cannot be empty"
-    }
     else{
-       
+        document.getElementById("error_img1").style.display = "none";
+        document.getElementById("error_msg1").style.display = "none";
     }   
 }
 
@@ -72,11 +70,9 @@ function secondNameValidation(){
         document.getElementById("error_msg2").innerHTML = "enter valid name"
     }
 
-    else if (secondNameValue.length == 0){
-        document.getElementById("error_msg2").innerHTML = "Name cannot be empty"
-    }
     else{
-       
+        document.getElementById("error_img2").style.display = "none";
+        document.getElementById("error_msg2").style.display = "none";
     }   
 }
 
@@ -95,14 +91,12 @@ function emailValidation(){
     console.log(emailValue);
     if(!emailValue.match(Emailreg)){
         document.getElementById("error_img3").style.display = "block";
-        document.getElementById("error_msg3").innerHTML = "enter valid email id"
+        document.getElementById("error_msg3").innerHTML = "enter valid email id";
     }
 
-    else if (emailValue.length == 0){
-        document.getElementById("error_msg3").innerHTML = "cannot be empty"
-    }
     else{
-       
+        document.getElementById("error_img3").style.display = "none";
+        document.getElementById("error_msg3").style.display = "none";
     }   
 }
 
@@ -121,7 +115,7 @@ function passwordValidation(){
         error.push("Your password must be at least 8 characters")
   }
   else{
-      error.push("")
+    document.getElementById("error_msg4").style.display = "none";
   }
 
 
@@ -129,7 +123,7 @@ function passwordValidation(){
        error.push("Your password must contain at least one lowercase letter.")
   }
   else{
-    error.push("")
+    document.getElementById("error_msg4").style.display = "none";
   }
 
 
@@ -137,7 +131,7 @@ function passwordValidation(){
       error.push("Your password must contain at least one uppercase letter.")
   }
   else{
-    error.push("")
+    document.getElementById("error_msg4").style.display = "none";
   }
 
 
@@ -152,5 +146,9 @@ function passwordValidation(){
     document.getElementById("error_msg4").innerHTML = error.join("<br>")
     return false;
   }
-  return true;
+  else{
+    document.getElementById("error_msg4").style.display = "none";
+    return true;
+  }
+ 
 }

@@ -26,7 +26,12 @@ function formSubmission(event){
             input[i].style.border = "2px solid red";
             comonError.style.display = "block";   
         }
+        else if (input[i].value.length != 0){
+            input[i].style.border = "2px solid green"; 
+        }
+       
     }
+    // window.location.href ="./sucess.html";
 
 }
 

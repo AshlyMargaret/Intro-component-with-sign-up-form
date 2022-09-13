@@ -28,17 +28,23 @@ function formSubmission(event){
         }
         else if (input[i].value.length != 0){
             input[i].style.border = "2px solid green"; 
-        }
+        }  
        
     }
-    // window.location.href ="./sucess.html";
+
+    if(input==input.length){
+        window.location.href ="./sucess.html";
+    }
+     
 
 }
 
 //first name validation
 
 let firstNameValue;  
-let fregName = /^[a-zA-Z]+$/;
+// let fregName = /^[a-zA-Z]+$/;
+let fregName = /^[a-zA-Z ]*$/;
+
 
 firstName.addEventListener("keyup",firstNameValidation)
 
@@ -63,7 +69,7 @@ function firstNameValidation(){
  //second name validation
 
 let secondNameValue;  
-let lregName = /^[a-zA-Z]+$/;
+let lregName = /^[a-zA-Z ]*$/;
 
 secondName.addEventListener("keyup",secondNameValidation)
 

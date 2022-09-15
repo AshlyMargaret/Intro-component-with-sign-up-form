@@ -21,13 +21,7 @@ function bindListners() {
 }
 
 
-// function validateField(value) {
-//     if (value == null || value == undefined) {
-//         return false;
-//     }
-//     return true;
 
-// }
 
 function isNameValid(name) {
     let nameValidationRegex = /^[a-zA-Z ]*$/;
@@ -41,8 +35,7 @@ function isNameValid(name) {
 function validateFirstName() {
     let firstNameValue = firstName.value;
     if (isNameValid(firstNameValue)) {
-        // document.getElementById("error_img1").style.display = "none";
-        // document.getElementById("error_msg1").style.display = "none";
+      
         showErrorForInputField("error_img1", "error_msg1", null)
         return firstNameValue;
     }
@@ -53,8 +46,7 @@ function validateFirstName() {
 function validateLastName() {
     let lastNameValue = secondName.value;
     if (isNameValid(lastNameValue)) {
-        // document.getElementById("error_img1").style.display = "none";
-        // document.getElementById("error_msg1").style.display = "none";
+       
         showErrorForInputField("error_img2", "error_msg2", null)
         return lastNameValue;
     }
@@ -77,8 +69,7 @@ function isEmailValid(email) {
 function validateEmail() {
     let emailValue = email.value;
     if (isEmailValid(emailValue)) {
-        // document.getElementById("error_img1").style.display = "none";
-        // document.getElementById("error_msg1").style.display = "none";
+       
         showErrorForInputField("error_img3", "error_msg3", null)
         console.log("emailsucess");
         return emailValue;
@@ -105,8 +96,7 @@ function ispasswordValid(pswd) {
 function validatePassword() {
     let passwordValue = password.value;
     if (ispasswordValid(passwordValue)) {
-        // document.getElementById("error_img1").style.display = "none";
-        // document.getElementById("error_msg1").style.display = "none";
+        
         showErrorForInputField("error_img4", "error_msg4", null)
 
         return passwordValue;
@@ -120,11 +110,7 @@ function validatePassword() {
 
 
 function showErrorForInputField(errorImageId, errorMesssageId, error) {
-    // if(error){            // This is equivalent to validateField(error)
-    //     document.getElementById(errorImageId).style.display ="block" 
-    // }else{
-    //     document.getElementById(errorImageId).style.display = "none";
-    // }
+   
 
 
     document.getElementById(errorImageId).style.display = error ? "block" : "none";

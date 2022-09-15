@@ -129,7 +129,11 @@ form.addEventListener("submit", (event) => {
             alert(`${firstName} ${secondName} sucessfully registered`);
         } else {
             return;
-        }
-
-    
+        }   
 });
+
+document.getElementById("btn_cancel").addEventListener("click",clearFields);
+function clearFields(){
+    console.log("cancel button worked")
+    form.reset();
+}
